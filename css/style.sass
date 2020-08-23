@@ -1,0 +1,629 @@
+$main-font: 'Open Sans', sans-serif
+$banner-font: 'Roboto', sans-serif
+$footer-font: 'Montserrat', sans-serif
+
+$violet-color: #8d83f9
+$btn-color: #ffff
+$title-color: black
+$description-color: #777777
+$description-color-dark: #333333
+
+$shadow-btn: 0px 5px 25px 5px rgba(189,227,239,0.75)
+$shadow-nav: 0px 5px 25px 5px rgba(180,158,241,1)
+$shadow-box: 0px 5px 25px 5px rgba(237,235,253,1)
+$shadow-nav-tabs: 0px 5px 50px 5px rgba(237,235,253,1)
+
+$gradient: linear-gradient(64deg, rgba(140,132,249,1) 0%, rgba(161,101,244,1) 64%)
+
+$cont-size: 1200px
+
+li, ul
+  list-style: none !important
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none !important
+
+p
+  margin: 0
+
+input
+  border: none
+
+button
+  border: none
+  outline: none
+
+%shopTitle
+  font-family: $main-font
+  font-weight: bold
+  font-size: 50px
+  color: $title-color
+  top: 95px
+  text-align: center
+  width: 97%
+  z-index: 999
+
+%shopBox
+  margin: auto
+  width: 100%
+  max-width: 1380px
+  background-color: $btn-color
+  box-shadow: $shadow-box
+  position: relative
+  bottom: 24px
+
+.container
+  max-width: $cont-size
+
+.header
+  background: url("../images/banner/bg.png") no-repeat center
+  background-size: cover
+  height: 1052px
+  .header-nav
+    padding-top: 79px
+    &__menu
+      border-radius: 50px
+      background-color: $btn-color
+      padding-top: 14px
+      padding-bottom: 14px
+      box-shadow: $shadow-nav
+      max-width: 375px
+      .menu-search
+        padding: 5px 0 5px 30px
+        img
+          padding-right: 8px
+          max-width: 100%
+          height: auto
+        input
+          max-width: 117px
+          &::placeholder
+            color: $title-color
+            font-family: $main-font
+            font-weight: 600
+            font-size: 16.5px
+      .menu-burger
+        border-left: 1px solid #e0e0e0
+        padding-top: 5px
+        padding-bottom: 5px
+        .btn
+          padding: 0
+          font-family: $main-font
+          font-weight: 600
+          font-size: 16.5px
+          margin-left: 40px
+          color: $title-color
+          i
+            padding-left: 15px
+        .dropdown-menu
+          border: none
+          border-radius: 0.5rem
+          min-width: 9rem
+          margin: 29px 0 0
+          box-shadow: $shadow-nav
+          .dropdown-item
+            padding: 5px 10px
+  .header-info
+    &__photo
+      position: relative
+      bottom: 73px
+      right: 226px
+      z-index: -1
+    &__text
+      padding-left: 53px
+      .text-circle
+        position: relative
+        top: 13px
+        right: 64px
+        padding-bottom: 90px
+      .text-title
+        font-size: 115px
+        font-family: $banner-font
+        font-weight: bold
+        color: $title-color
+        span
+          color: $btn-color
+      .text-words
+        font-size: 50px
+        font-family: $banner-font
+        font-weight: 500
+        color: #fbf934
+        padding-left: 11px
+        span
+          color: $btn-color
+      .text-btn
+        border-radius: 50px
+        background-color: $btn-color
+        padding: 22px 55px
+        box-shadow: $shadow-btn
+        font-family: $main-font
+        font-weight: 600
+        font-size: 19px
+        margin: 73px 0 0 10px
+        &:hover
+          transform: scale(1.1)
+        i
+          padding-left: 10px
+          color: $violet-color
+      .text-square
+        position: relative
+        left: 75%
+
+.arrivals
+  @extend %shopBox
+  .arrivals-content
+    &__title
+      @extend %shopTitle
+    &__figure-one
+      top: 69%
+      left: 13%
+    &__figure-two
+      top: 41%
+      float: right
+      right: 30%
+    &__figure-three
+      top: 53%
+      float: right
+      left: 1%
+    &__figure-four
+      top: 32%
+      left: -75px
+      z-index: -1
+    &__figure-five
+      top: 38%
+      right: -50px
+    &__figure-six
+      bottom: 6%
+      left: -47px
+    &__figure-seven
+      bottom: 11%
+      right: -42px
+      z-index: -1
+
+.product
+  &__cards
+    padding-top: 85px
+    padding-bottom: 97px
+    .card
+      border: none
+      .card-top
+        visibility: hidden
+        padding: 20px
+        .heart-photo
+          padding-right: 6px
+          width: 30px
+        .comments-photo
+          padding-right: 6px
+          width: 37px
+      .card-img-top
+        width: max-content
+        margin: auto
+      .card-body
+        padding-bottom: 72px
+        padding-top: 5px
+        .card-title
+          font-family: $main-font
+          font-weight: 400
+          font-size: 18px
+          color: $description-color
+        .card-text
+          font-family: $main-font
+          font-weight: 600
+          font-size: 25px
+          color: $title-color
+      .card-btn
+        display: none
+        border-radius: 50px
+        position: absolute
+        bottom: -23px
+        right: 25%
+        background: $gradient
+        box-shadow: $shadow-box
+        color: $btn-color
+        font-family: $main-font
+        font-weight: 500
+        font-size: 18px
+        padding: 17px 48px
+.product
+  &__cards
+    .card
+      &:hover
+        box-shadow: $shadow-box
+        transform: translate(0px, -15px)
+        .card-top
+          visibility: visible
+        .card-body
+          .card-title
+            color: $description-color-dark
+          .card-text
+            color: $violet-color
+        .card-btn
+          display: block
+          &:hover
+            transform: translate(0px, -3px)
+
+.brands
+  .brands-content
+    &__figure-one
+      top: 28%
+      left: 43%
+    &__title
+      padding-top: 258px
+      font-family: $main-font
+      font-weight: bold
+      font-size: 50px
+      color: $title-color
+    &__text
+      padding-top: 30px
+      font-family: $main-font
+      font-weight: 400
+      font-size: 25px
+      color: $description-color-dark
+      letter-spacing: 0.04em
+      span
+        color: $violet-color
+    &__description
+      padding: 30px 61px 270px 0
+      font-family: $main-font
+      font-weight: 400
+      font-size: 16px
+      color: $description-color
+    &__figure-two
+      bottom: 7%
+      right: 91%
+    &__phone
+      top: 113px
+      right: 173px
+    &__circle
+      margin-left: 132px
+    &__figure-three
+      bottom: 37%
+      right: 0
+    &__figure-four
+      bottom: 22%
+      left: 100%
+
+.showcase
+  @extend %shopBox
+  z-index: 999
+  .showcase-content
+    &__title
+      @extend %shopTitle
+    &__figure-one
+      top: 35%
+      left: 5%
+    &__figure-two
+      top: 41%
+      float: right
+      right: 32%
+    &__figure-three
+      top: 82px
+      float: right
+      left: 131px
+    &__figure-four
+      top: 8.9%
+      left: 5%
+    &__figure-five
+      top: 38%
+      right: -18px
+    &__figure-six
+      bottom: 26%
+      left: -60px
+
+.tabs
+  &__nav
+    border-radius: 50px
+    box-shadow: $shadow-nav-tabs
+    padding: 0 73px
+    margin: 93px 47px 0
+    a
+      font-family: $main-font
+      font-weight: 600
+      font-size: 18px
+      color: $title-color
+  &__link
+    padding: 24px 48px 23px 48px
+    text-align: center
+  &__link_active
+    cursor: default
+    color: $violet-color !important
+    text-shadow: -1px 6px 4px rgba(209,201,235,0.75)
+  &__pane
+    display: none
+  &__pane_show
+    display: block
+
+.newsletter
+  background: $gradient
+  background-size: cover
+  height: 492px
+  position: relative
+  bottom: 102px
+  .newsletter-content
+    padding-top: 90px
+    &__title
+      font-family: $main-font
+      font-weight: bold
+      font-size: 50px
+      color: $btn-color
+      top: 95px
+      text-align: center
+      width: 97%
+      letter-spacing: 0.03em
+    &__bg-text
+      font-family: $banner-font
+      font-size: 150px
+      font-weight: 900
+      color: rgba(254,254,254,0.04)
+    &__form
+      background-color: $btn-color
+      border-radius: 50px
+      margin: 0 169px
+      .form-group
+        input
+          border-radius: 50px
+          border: none
+          padding: 38px 20px
+          &::placeholder
+            font-size: 20px
+        .btn-primary
+          border-radius: 50px
+          background: $gradient
+          border: none
+          font-family: $main-font
+          font-weight: 600
+          font-size: 20px
+          margin: 6px
+          padding: 0 58px
+
+.footer
+  .footer-content
+    &__top
+      .top-title
+        font-family: $banner-font
+        font-weight: normal
+        font-size: 50px
+        color: $title-color
+      .top-list
+        padding-top: 30px
+        &__item
+          padding: 0 30px
+          a
+            color: $title-color
+            font-family: $main-font
+            font-weight: 500
+            font-size: 20px
+            &:hover
+              color: $violet-color !important
+              text-shadow: -1px 6px 4px rgba(209,201,235,0.75)
+      .network-list
+        padding-top: 50px
+        &__item
+          padding: 0 19px
+          a
+            border: 2px solid #f6f5f7
+            border-radius: 50px
+            color: $description-color-dark
+            font-size: 23px
+            &:hover
+              border: none
+              background: $gradient
+              box-shadow: 0 8px 20px 5px rgba(207,207,208,1)
+              color: $btn-color
+          .item-facebook
+            padding: 12px 20px
+          .item-google
+            padding: 12px
+          .item-inst
+            padding: 12px 16px
+          .item-twitter
+            padding: 12px 15px
+    &__bottom
+      background-color: #f6f5f7
+      background-size: cover
+      height: 63px
+      margin-top: 60px
+      .bottom-title
+        font-family: $footer-font
+        font-size: 18px
+        font-weight: 300
+        color: $description-color
+        padding-top: 20px
+
+@media screen and (max-width: 1586px)
+  .figure-extra-none
+    display: none
+
+@media screen and (max-width: 1200px)
+  .header-info__photo
+    width: 980px
+    height: 818px
+    right: 130px !important
+    top: 20px !important
+  .header-info__text
+    .text-title
+      font-size: 105px !important
+  .title
+    font-size: 35px !important
+  .arrivals
+    bottom: 71px
+  .brands-content
+      padding-left: 59px
+      &__phone
+        left: 33px
+      &__circle
+        display: none
+      &__figure-three
+        display: none
+  .newsletter-content__bg-text
+    font-size: 140px !important
+
+@media screen and (max-width: 992px)
+  .figure-media-none
+    display: none
+  .header-info
+    &__photo
+      display: none
+    &__text
+      padding: 0 !important
+      .text-circle
+        padding-bottom: 43px !important
+  .arrivals
+    bottom: 30px
+    .product__cards
+      padding-top: 161px
+  .brands-content
+    &__phone
+      top: 222px !important
+      width: 320px
+      left: 12px
+  .showcase
+    .tabs__nav
+      margin-top: 205px
+  .newsletter
+    height: 375px
+    .newsletter-content
+      &__title
+        top: 58px !important
+      &__bg-text
+        font-size: 100px !important
+      .form-group
+        input
+          padding: 29px 8px
+          &::placeholder
+            font-size: 17px
+        .btn-primary
+          font-size: 17px
+          margin: 3px
+          padding: 0 50px
+
+@media screen and (max-width: 767px)
+  .header-nav__logo
+    padding-bottom: 30px
+  .header-info
+    &__text
+      padding-left: 13% !important
+      .text-title
+        font-size: 95px !important
+      .text-circle
+        padding-bottom: 0 !important
+  .brands-content
+    padding-left: 13px
+    &__phone
+      display: none
+    &__title
+      padding-top: 159px !important
+    &__text
+      font-size: 23px !important
+    &__description
+      padding: 30px 0 200px !important
+  .newsletter
+    .newsletter-content
+      &__bg-text
+        font-size: 70px !important
+        padding-bottom: 21px
+        padding-top: 42px
+      &__title
+        top: 74px !important
+      &__form
+        margin: 0 84px !important
+  .footer
+    .footer-content__top
+      .top-list__item
+          padding: 0 21px
+    .footer-content__bottom
+      .bottom-title
+        font-size: 14px
+
+@media screen and (max-width: 576px)
+  .title
+    font-size: 29px !important
+  .header
+    height: 803px
+    .header-nav
+      padding-top: 53px
+      &__menu
+        padding-top: 9px
+        padding-bottom: 9px
+        .menu-search
+          img
+            height: 18px
+        .menu-burger
+          .btn
+            font-size: 13px
+    .header-info
+      &__text
+        .text-title
+          font-size: 60px !important
+        .text-btn
+          margin-top: 47px
+          padding: 17px 50px
+          font-size: 16px
+  input
+    &::placeholder
+      font-size: 13px !important
+  .arrivals
+    bottom: 78px
+    .arrivals-content__title
+      width: 94% !important
+  .brands-content
+    &__title
+      padding-top: 106px !important
+  .showcase-content__title
+    width: 94% !important
+  .tabs__link
+    padding: 24px 15px 23px
+  .newsletter
+    .newsletter-content
+      &__bg-text
+        font-size: 51px !important
+      &__title
+        top: 62px !important
+        width: 94% !important
+      &__form
+        margin: 0 !important
+  .footer-content__top
+    .top-list
+      display: block !important
+      text-align: center
+      margin: auto
+    .network-list__item
+      padding: 0 13px !important
+
+@media screen and (max-width: 374px)
+  .header
+    .header-nav__menu
+      .menu-search
+        padding-left: 13px
+        input
+          max-width: 106px
+      .menu-burger
+        .btn
+          margin-left: 33px
+    .header-info__text
+      .text-title
+        font-size: 56px !important
+  .tabs__link
+    padding: 24px 0px 23px
+  .newsletter
+    .newsletter-content
+      &__bg-text
+        display: none
+      &__form
+        margin-top: 158px !important
+        .form-group
+          .btn-primary
+            font-size: 12px
+            margin: 2px
+            padding: 0 36px
+          input
+            padding: 25px 8px
+  .footer-content__top
+    .network-list__item
+      padding: 0 7px !important
+
+
+
+
+
