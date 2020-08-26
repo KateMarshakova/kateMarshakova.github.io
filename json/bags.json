@@ -1,0 +1,44 @@
+{
+  "1bag": {
+    "heartAmount": "132",
+    "commentsAmount": "54",
+    "img": "images/arrivals/1bag.png",
+    "title": "Black Genuine Leather Bags",
+    "text": "$ 23.20"
+  },
+  "2bag": {
+    "heartAmount": "199",
+    "commentsAmount": "470",
+    "img": "images/arrivals/2bag.png",
+    "title": "Fashion Red Leather Bags",
+    "text": "$ 20.16"
+  },
+  "3bag": {
+    "heartAmount": "654",
+    "commentsAmount" : "123",
+    "img": "images/arrivals/3bag.png",
+    "title": "Fashion Genuine Leather Bags",
+    "text": "$ 30.14"
+  },
+  "4bag" : {
+    "heartAmount" : "382",
+    "commentsAmount" : "507",
+    "img" : "images/arrivals/4bag.png",
+    "title" : "Simply Leather Bags",
+    "text" : "$ 15.20"
+  },
+  "5bag" : {
+    "heartAmount" : "254",
+    "commentsAmount" : "120",
+    "img" : "images/arrivals/5bag.png",
+    "title" : "New Fashion Leather Bags",
+    "text" : "$ 25.20"
+  },
+  "6bag" : {
+    "heartAmount" : "310",
+    "commentsAmount" : "203",
+    "img" : "images/arrivals/6bag.png",
+    "title" : "Single Hand Models Bags",
+    "text" : "$ 17.6"
+  }
+}

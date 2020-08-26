@@ -1,0 +1,44 @@
+{
+  "2watch": {
+    "heartAmount": "199",
+    "commentsAmount": "470",
+    "img": "images/showcase/2watches.png",
+    "title": "Fashion Silver Chain Watch",
+    "text": "$ 35.24"
+  },
+  "3watch": {
+    "heartAmount": "654",
+    "commentsAmount" : "123",
+    "img": "images/showcase/3watches.png",
+    "title": "Fashion Chain Watch",
+    "text": "$ 23.12"
+  },
+  "4watch" : {
+    "heartAmount" : "382",
+    "commentsAmount" : "507",
+    "img" : "images/showcase/4watches.png",
+    "title" : "Fashion Black Chain Watch",
+    "text" : "$ 42.32"
+  },
+  "5watch" : {
+    "heartAmount" : "254",
+    "commentsAmount" : "120",
+    "img" : "images/showcase/5watches.png",
+    "title" : "Fashion Lether Watch",
+    "text" : "$ 15.20"
+  },
+  "6watch" : {
+    "heartAmount" : "310",
+    "commentsAmount" : "203",
+    "img" : "images/showcase/6watches.png",
+    "title" : "Fashion Forign Watch",
+    "text" : "$ 36.12"
+  },
+  "1watch": {
+    "heartAmount": "132",
+    "commentsAmount": "54",
+    "img": "images/showcase/1watches.png",
+    "title": "Fashion Genuine Chain Watch",
+    "text": "$ 25.36"
+  }
+}
