@@ -1,15 +1,16 @@
 $('document').ready(function () {
-    loadBags();
-    loadWatches();
-    loadCloth();
-    loadFashion();
-    loadFurnitures();
-    loadMobiles();
-    loadToys();
+    loadJson('#bags');
+    loadJson('#watches');
+    loadJson('#cloth');
+    loadJson('#fashion');
+    loadJson('#furnitures');
+    loadJson('#mobile');
+    loadJson('#toys');
 });
 
-function loadBags() {
-    $.getJSON( "json/bags.json", function( data ) {
+function loadJson(product) {
+    let json = 'json/'+ product.slice(1) +'.json';
+    $.getJSON( json, function( data ) {
         let content = '';
         for (let key in data) {
             content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
@@ -21,111 +22,9 @@ function loadBags() {
             content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
             content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
         }
-        $('#bags').html(content);
+        $(product).html(content);
     })
-};
-
-function loadWatches() {
-    $.getJSON( "json/watches.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#watches').html(content);
-    })
-};
-
-function loadCloth() {
-    $.getJSON( "json/cloth.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#cloth').html(content);
-    })
-};
-
-function loadFashion() {
-    $.getJSON( "json/fashion.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#fashion').html(content);
-    })
-};
-
-function loadFurnitures() {
-    $.getJSON( "json/furnitures.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#furnitures').html(content);
-    })
-};
-
-function loadMobiles() {
-    $.getJSON( "json/mobile.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#mobile').html(content);
-    })
-};
-
-function loadToys() {
-    $.getJSON( "json/toys.json", function( data ) {
-        let content = '';
-        for (let key in data) {
-            content+='<div class="col mb-4" style="margin-bottom: 2rem!important">\n' +
-                '                            <div class="card h-100" >\n' +
-                '                                <div class="card-top" style="display: flex; justify-content: space-between">\n' +
-                '                                    <div class="card-top__heart" style="display: flex"><img class="heart-photo" src="images/arrivals/heart.png" alt="like"><p class="heart-amount">'+data[key]['heartAmount'] + '</p></div>';
-            content+='<div class="card-top__comments" style="display: flex"><img class="comments-photo" src="images/arrivals/comments.png" alt="comments"><p class="comments-amount">'+data[key]['commentsAmount'] + '</p></div></div>';
-            content+='<img src="'+data[key]['img'] + '" class="card-img-top" alt="bag">';
-            content+='<div class="card-body" style="text-align: center; max-height: 150px"><h3 class="card-title">'+data[key]['title'] + '</h3>';
-            content+='<p class="card-text">'+data[key]['text'] + '</p></div><button class="card-btn" style="align-items: center">Add to Cart</button></div></div>';
-        }
-        $('#toys').html(content);
-    })
-};
+}
 
 
 var $tabs = function (target) {
