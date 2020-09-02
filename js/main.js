@@ -1,11 +1,9 @@
 $('document').ready(function () {
-    loadJson('#bags');
-    loadJson('#watches');
-    loadJson('#cloth');
-    loadJson('#fashion');
-    loadJson('#furnitures');
-    loadJson('#mobile');
-    loadJson('#toys');
+    const allJson = ['#bags', '#watches', '#cloth', '#fashion', '#furnitures', '#mobile', '#toys'];
+
+    for (const title of allJson) {
+        loadJson(title);
+    }
 });
 
 function loadJson(product) {
